@@ -1,0 +1,395 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.row {
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
+
+.shop {
+    max-width: 1000px;
+    margin: 10px;
+    background-color: #E4E7ED;
+    position: relative;
+    overflow: hidden;
+}
+
+.shop::before {
+    position: absolute;
+    content: "";
+    background: #D10024;
+    width: 60%;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    transform: skewX(-45deg);
+    opacity: 0.9;
+    z-index: 1;
+}
+
+.shop:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 1px;
+    width: 100%;
+    background: #D10024;
+    opacity: 0.9;
+    transform: skewX(-45deg) translateX(-100%);
+}
+
+.shop-img img {
+
+    width: 400px;
+    vertical-align: middle;
+    padding: 30px;
+    margin: 10px;
+    transition: all 0.3s ease-in-out;
+
+}
+
+.shop-img:hover img {
+    transform: scale(1.2);
+}
+
+.shop-body {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    width: 50%;
+    padding: 30px
+}
+
+.shop-body h3 {
+    /* position: absolute; */
+    flex-wrap: nowrap;
+    font-size: 2rem;
+    top: 0;
+    bottom: 0;
+    left: 10px;
+    /* color: #FFFFFF; */
+    color: #FFFFFF;
+    font-weight: 100px;
+}
+
+.shop-body a {
+    /* position: absolute; */
+    text-decoration: none;
+    top: 100px;
+    left: 30px;
+    color: #FFFFFF;
+}
+
+/* phần row mid list ngang */
+.row-mid {
+    margin-top: 90px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.sub-menu_row-mid {
+    display: flex;
+    margin-left: 230px;
+}
+
+.sub-menu_row-mid li {
+    list-style: none;
+    padding: 20px;
+    font-size: 1.2rem;
+    position: relative;
+}
+
+.sub-menu_row-mid li a {
+    text-decoration: none;
+    color: #525967;
+    font-weight: 500;
+}
+
+.sub-menu_row-mid li a::before {
+    position: absolute;
+    content: "";
+    background-color: #c53209;
+    height: 3px;
+    width: 0;
+    bottom: 15px;
+    left: 0px;
+    transition: 0.25s ease-in-out;
+}
+
+.sub-menu_row-mid li:hover a::before {
+    width: 100%;
+}
+
+.row-mid h3 {
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 2rem;
+}
+
+.list-products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 1600px;
+    margin: auto;
+    margin-bottom: 100px;
+    max-width: 1500px;
+}
+
+.sub-menu-list-products {
+    text-align: center;
+    max-width: 25%;
+    border: #eef0f4 2px solid;
+    box-sizing: border-box;
+    transition: all 0.35s ease-in-out;
+}
+
+.sub-menu-list-products:hover {
+    border: #D10024 2px solid;
+}
+
+.sub-menu-list-products img {
+    width: 350px;
+    text-align: center;
+}
+
+.sub-menu-list-products p {
+    text-transform: uppercase;
+    color: #8D99AE;
+}
+
+.sub-menu-list-products h4 {
+    font-weight: 800;
+    font-size: 2rem;
+    color: #970606;
+}
+
+.sub-menu-list-products h4 span {
+    text-decoration: line-through;
+    color: #525967;
+}
+
+.sub-menu-list-products a {
+    text-decoration: none;
+    font-weight: 600;
+    color: #2a2d32;
+    transition: 0.3s color;
+    font-size: 1.2rem;
+    transition: all 0.25 ease-in-out;
+}
+
+.sub-menu-list-products a:hover {
+    color: rgb(241, 84, 84);
+}
+
+.sub-menu-list-products h4 {
+    font-size: 1.1rem;
+}
+
+.sub-menu-list-products .row-line {
+    position: relative;
+    margin-top: 40px;
+}
+
+.sub-menu-list-products .row-line::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 15px;
+    right: 0;
+    width: 90%;
+    /* -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%); */
+    transform: translateY(-50%);
+    height: 1px;
+    background-color: #0d0d0e;
+}
+
+.sub-menu-list-products-label {
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+}
+
+.sub-menu-list-products-label button {
+    margin: 10px;
+    border: none;
+    font-size: 1.1rem;
+    background: none;
+}
+
+.hotdeal {
+    background-image: url(/img/hotdeal.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 100px 0px;
+    padding-left: 0px;
+    margin: 30px 0px;
+    text-align: center;
+}
+
+.sub-deal {
+    display: flex;
+    justify-content: center;
+}
+
+.sub-deal li {
+    list-style: none;
+    padding: 30px;
+    margin: 15px;
+    background: rgba(255, 0, 0, 0.742);
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    text-align: center;
+    display: inline-block;
+
+
+}
+
+.sub-deal li h3 {
+    margin-top: 10px;
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 1.1;
+}
+
+.hotdeal .hot-deal_title {
+    font-weight: 550;
+    font-size: 35px;
+    padding: 0px 20px;
+    margin: 20px;
+
+}
+
+.hot-deal-content {
+    font-size: 40px;
+    /* margin-top: 0; */
+    margin-bottom: 50px;
+    margin-left: 00px;
+}
+
+.hot-deal-link {
+    background: rgba(255, 0, 0, 0.742);
+    height: 100px;
+    width: 100px;
+    padding: 24px 50px;
+    border-radius: 30px;
+    text-decoration: none;
+    color: #FFFFFF;
+
+}
+
+/* phần top--selling*/
+.top-selling-products {
+    max-width: 1600px;
+    display: flex;
+    margin-left: 200px;
+    /* margin: auto; */
+    padding-bottom: 100px;
+}
+
+.sub-product li {
+    display: flex
+}
+
+.sub-product li img {
+    width: 20%
+}
+
+.h4-title_titles {
+    margin-bottom: 10px;
+    font-weight: 600;
+    font-size: 1.3rem;
+
+}
+
+.list-title_products p {
+    opacity: 0.7;
+}
+
+.list-title_products a {
+    text-decoration: none;
+    font-weight: 550;
+    color: rgba(0, 0, 0, 0.697);
+}
+
+.list-title_products a:hover {
+    color: #D10024;
+}
+
+.list-title_products h4 {
+    font-size: large;
+    color: #970606;
+}
+
+.list-title_products h4 span {
+    color: #0d0d0e;
+    text-decoration: line-through;
+}
+
+.your_email {
+    border-top: #525967 1px solid;
+    text-align: center;
+}
+
+.your_email h2 {
+    padding: 40px;
+    font-weight: 500;
+    font-size: 30px;
+}
+
+.your_email h2 strong {
+    font-weight: 550;
+}
+
+.form-sign_up input {
+    padding: 0 25px;
+    height: 50px;
+    background: #FFF;
+    border: 1px black solid;
+    width: 500px;
+    font-size: 1.2rem;
+    border-radius: 40px 0px 0px 40px;
+}
+
+.form-sign_up button {
+    padding: 0 30px;
+    height: 55px;
+    width: 150px;
+    background: #FFF;
+    border: 1px solid #E4E7ED;
+    border-radius: 0 40px 40px 0;
+    margin: -9px;
+    background: red;
+    font-size: 1.2rem;
+}
+.your_email .sub-icon{
+    display: flex;
+    justify-content: center;
+}
+.your_email .sub-icon li{
+    list-style: none;
+    /* border: #2a2d32 1px solid; */
+    margin: 10px;
+    
+}
+.your_email .sub-icon li button{
+    width: 30px;
+    height: 30px;
+    background: none;
+    border: 1px solid #999b9f;
+}
+/* .your_email .sub-icon li i{
+    font-size: 20px;
+    width: 20px;
+    height: 25px;
+    text-align: center;
+} */
