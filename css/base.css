@@ -9,8 +9,12 @@
 body {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
-
+#wrapper{
+    max-width: 1600px;
+    margin: 0 auto;
+}
 .navbar-top {
     background: #333333;
     display: flex;
@@ -42,14 +46,15 @@ ul.sub-menu-top li a {
 phần navbar giữa
 */
 .navbar-mid {
-    font-size: 1.2rem;
+    font-size: 1.rem;
     display: flex;
     background: #15161D;
     justify-content: space-around;
     border-bottom: red 4px solid;
     height: 150px;
     padding: 0px 100px;
-    
+    max-width: 1600px;
+    position: relative;
 }
 .container{
     max-width: 1600px;
@@ -70,23 +75,25 @@ phần navbar giữa
 .navbar-mid label{
     padding: 50px;
     margin-left: 80px;
+    width: 100%;
+    display: flex;
 }
 .navbar-mid label .button-menu{
-    padding: 0 25px;
+    padding: 0 20px;
     height: 50px;
     background: #FFF;
     border: 1px solid #E4E7ED;
     border-radius: 40px 0 0 40px;
-    margin: -7px;
-    font-size: 1.2rem;
+    /* margin: -7px; */
+    font-size: 1.rem;
 }
 .navbar-mid label .form-input{
     padding: 0 25px;
     height: 50px;
     background: #FFF;
     border: none;
-    width: 300px;
-    font-size: 1.2rem;
+    width: 250px;
+    font-size: 1.rem;
 }
 .button-search{
     padding: 0 25px;
@@ -94,15 +101,16 @@ phần navbar giữa
     background: #FFF;
     border: 1px solid #E4E7ED;
     border-radius: 0 40px 40px 0;
-   margin: -7px;    
+   /* margin: -7px;     */
    background: red;
-   font-size: 1.2rem;
+   font-size: 1.rem;
 }
 .sub-menu-mid li {
     list-style: none;
     padding: 50px 30px;
     display: block;
     text-align: center;
+    font-size: 15px;
 }
 .icon_mid{
     display:block ;
@@ -111,6 +119,12 @@ phần navbar giữa
 .sub-menu-mid li a {
     text-decoration: none;
     color: #FFFFFF;
+}
+@media (max-width=390px) {
+    #logo img{
+        width: 70px;
+    }
+    
 }
  /* phần navbar cuối */
 .navbar-bottom{
@@ -122,10 +136,12 @@ phần navbar giữa
 .sub-menu-bottom li {
     position: relative;
     list-style: none;
-    padding: 20px;
+    margin: 20px 5px 20px 10px;
+    width: 7%;
+    text-align: center;
 }
 .sub-menu-bottom li a{
-    font-size: 1.2rem;
+    font-size: 1.rem;
     text-decoration: none;
     color: #2B2D42;
 }
